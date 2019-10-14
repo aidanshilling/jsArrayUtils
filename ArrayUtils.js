@@ -1,16 +1,16 @@
-function printReverse(arry) {
+Array.prototype.printReverse = function() {
 //Prints a given array in reverse order to console
-    var length = arry.length;
+    var length = this.length;
     for(var i = length; i >= 0; i--) {
-        console.log(arry[i]);
+        console.log(this[i]);
     }
 }
 
-function isUniform(arry) {
+Array.prototype.isUniform = function() {
 //Returns if given array is uniform (all values are the same)
-    var itemOne = arry[0];
-    for(var i = 0; i < arry.length; i++) {
-        if(itemOne !== arry[count]) {
+    var itemOne = this[0];
+    for(var i = 0; i < this.length; i++) {
+        if(itemOne !== this[count]) {
             console.log("Failed on index: " + count);
             return false
         }
@@ -18,19 +18,19 @@ function isUniform(arry) {
     return true;
 }
 
-function sumArray(arry) {
+Array.prototype.sumArray = function() {
 //Sums all the values in a given array
     var sum = 0;
-    arry.forEach(function(item){
+    this.forEach(function(item){
         sum += item;
     });
     return sum;
 }
 
-function max(arry) {
+Array.prototype.max = function() {
 //Returns maximum value in a given array
     var max = 0;
-    arry.forEach(function(item){
+    this.forEach(function(item){
         if (item > max) {
             max = item;
         }
